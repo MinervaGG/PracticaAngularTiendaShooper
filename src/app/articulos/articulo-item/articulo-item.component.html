@@ -1,0 +1,81 @@
+<div class="container" *ngIf="articulo">
+  <div class="row">
+    <div class="col-md-6">
+      <img [src]="articulo.imagen" class="img-item img-fluid" alt="" />
+    </div>
+
+    <div class="col-md-6">
+      <div class="row justify-content-between">
+        <div class="col-md-6">T- shirts</div>
+        <div class="col-md-6">
+          <p class="text-end">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            Reviews (0)
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <p class="fs-2">{{ articulo.nombre }}</p>
+      </div>
+      <div class="row">
+        <div [ngClass]="tieneOferta() ? 'tieneOferta' : ''">
+          <p class="fs-4 text-secondary">{{ articulo.precio | currency : "EUR" : "symbol" : "1.2-2" : "es" }}</p>
+        </div>
+        <div class="row" *ngIf="tieneOferta()">
+          <p class="card-text text-danger fs-4">{{articulo.nuevoPrecio |
+            currency:'EUR':'symbol':'1.2-2':'es'}}</p>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <p>Color: <span class="fw-bold">Multicolor</span> </p>
+      </div>
+      <div class="row">
+        <img [src]="articulo.thumbnail" class="img-thumbnail" alt="..." />
+      </div>
+
+      <div class="row mt-5">
+        <p class="fw-bold">Size: choose size</p>
+      </div>
+
+      <div class="flex-row d-flex flex-wrap">
+        <div id="boton-tallas" class="col " *ngFor="let talla of articulo.tallas">
+          <div *ngIf="tallaEstaDisponible(talla)">
+            <button type="button" class="btn btn-light btn-outline-dark"> {{talla.numero}}</button>
+          </div>      
+          <div *ngIf="!tallaEstaDisponible(talla)">
+            <button type="button" class="btn btn-secondary btn-outline-dark text-decoration-line-through" disabled> {{talla.numero}}</button>
+          </div>    
+        </div>
+      </div>
+
+      <div class="row">
+        <p class="fw-bold text-decoration-underline">Size chart</p>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-md-4">
+          <button type="button" class="btn btn-dark text-light btn-outline-dark"><i class="fa fa-envelope-o"
+              aria-hidden="true"></i> Wait List</button>
+        </div>
+        <div class="col-md-4">
+          <button type="button" class="btn btn-light btn-outline-dark">Whishlist! <i class="fa fa-heart-o"
+              aria-hidden="true"></i></button>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <p>
+          Is your size/solor sold out?
+          <span class="fw-bold text-decoration-underline">Join the WaitList</span>
+        </p>
+      </div>
+      <div class="row">
+        <p class="fw-bold">Share: <i class="fa fa-twitter ms-3" aria-hidden="true"></i> <i class="fa fa-facebook-official ms-2 me-2" aria-hidden="true"></i>
+        <i class="fa fa-pinterest" aria-hidden="true"></i></p>
+      </div>
+    </div>
+  </div>
+</div>

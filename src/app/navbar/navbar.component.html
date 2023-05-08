@@ -1,0 +1,78 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                <a class="nav-link" [routerLink]="''">Home</a>
+              </li>
+              <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                <a class="nav-link" [routerLink]="'listaArticulos'">Catalog</a>
+              </li>              
+              <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                <a class="nav-link" [routerLink]="'nosotros'">Us</a>
+              </li>
+        </ul>
+        <ul class=" navbar-nav mx-auto">
+            <li class="nav-item">
+                <a class="navbar-brand" [routerLink]="''">Shooper.</a>
+              </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" [routerLink]="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  United States
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" [routerLink]="">Spain</a></li>
+                  <li><a class="dropdown-item" [routerLink]="">Germany</a></li>
+                  <li><a class="dropdown-item" [routerLink]="">Canada</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" [routerLink]="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  USD
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" [routerLink]="">USD</a></li>
+                  <li><a class="dropdown-item" [routerLink]="">EUR</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" [routerLink]="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  EN
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" [routerLink]="">FR</a></li>
+                  <li><a class="dropdown-item" [routerLink]="">GR</a></li>
+                </ul>
+              </li>
+              
+    
+              <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                <a class="nav-link" [routerLink]="">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                <a class="nav-link" [routerLink]="">
+                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                <a class="nav-link" [routerLink]="">
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                <a class="nav-link" [routerLink]="">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>                    
+                </a>
+              </li>
+        </ul>
+      </div>
+    </div>
+</nav>

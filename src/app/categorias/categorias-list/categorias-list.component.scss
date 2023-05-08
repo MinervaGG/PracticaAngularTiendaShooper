@@ -1,0 +1,34 @@
+h1{
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card{
+    margin-bottom: 20px;
+    height: 250px;
+    border-style: none;    
+}
+
+.card-header{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: none;
+
+    img{
+        max-height: 200px;
+        width: auto;
+        max-width: 100%;
+    }
+}
+
+.categoria{
+    font-size: larger;
+
+    &:focus, &:hover{
+        color: rgb(201 51 51 / 70%);            
+        border-bottom: 2px solid orange ;
+    }  
+}

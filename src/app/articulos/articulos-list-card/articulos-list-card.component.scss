@@ -1,0 +1,29 @@
+.favorito{
+    position: absolute;
+    top:20px;
+    right: 10%;
+}
+
+.tieneOferta{
+    text-decoration: line-through;
+}
+
+.card img{
+    width: 180px;
+}
+
+.card{
+    justify-content: center;
+    border-style: none;
+    height: 500px;
+    margin-top: 20px;
+}
+
+
+.card-header{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: none;
+}

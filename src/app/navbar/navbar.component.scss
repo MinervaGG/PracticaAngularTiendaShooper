@@ -1,0 +1,21 @@
+nav{
+    font-size: larger;
+    font-weight: 500;
+    margin: 20px 0;
+
+    .navbar-brand{
+        font-size: xx-large;
+    }
+
+    .nav-link{
+        color: black;
+
+        &:focus, &:hover{
+            color: rgb(201 51 51 / 70%);            
+            border-bottom: 2px solid orange ;
+        }      
+    }
+    
+}
+
+

@@ -1,0 +1,18 @@
+<h1>Shop by Category</h1>
+<div class="categorias mx-auto d-flex justify-content-around w-25 my-4">
+  <p class="categoria">Mujer</p>
+  <p class="categoria">Hombre</p>
+  <p class="categoria">Niño</p>
+</div>
+
+  <div class="contenedor row d-flex justify-content-around flex-wrap">
+    <div class="card col-md-4 mx-auto" style="width: 18rem;" *ngFor="let categoria of categoriaList" routerLink="listaArticulos">
+      <div class="card-header">
+        <img [src]="categoria.getImagen()" class="card-img-top" alt="...">
+      </div>
+      
+      <div class="card-body">
+        <h5 class="card-title text-center">{{categoria.getNombre()}}</h5>
+      </div>
+  </div>
+</div>
